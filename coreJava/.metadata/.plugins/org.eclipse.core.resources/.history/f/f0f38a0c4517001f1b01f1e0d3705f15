@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the number of address");
+		int n = sc.nextInt();
+		sc.nextLine();
+
+		Map<City, List<Address>> cityAddressMap = new HashSet<>();
+
+		for (int i = 0; i < n; i++) {
+
+			System.out.println("Enter the address 1 detail");
+			String[] details = sc.nextLine().split(",");
+
+			String city = details[2];
+			int pincode = Integer.parseInt(details[3]);
+
+			Address ad = new Address(details[0], details[1], city, details[3], pincode);
+			cityAddressMap.putIfAbsent(city, ad);
+		}
+
+	}
+
+}

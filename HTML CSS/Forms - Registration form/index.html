@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Registration form</h1>
+  </head>
+  <body>
+    <form action="display.php" method="POST">
+      <table>
+        <tr>
+          <td>Name :</td>
+          <td><input type="text" name="name" required /></td>
+        </tr>
+        <tr>
+          <td>Username :</td>
+          <td><input type="text" name="userName" required /></td>
+        </tr>
+        <tr>
+          <td>Password :</td>
+          <td><input type="text" name="password" required /></td>
+        </tr>
+        <tr>
+          <td>Re-enter Password :</td>
+          <td><input type="text" name="re-EnterPassword" required /></td>
+        </tr>
+        <tr>
+          <td>Address :</td>
+          <td><textarea name="address" id="" required></textarea></td>
+        </tr>
+        <tr>
+          <td>Gender :</td>
+          <td>
+            <input type="radio" name="gender" value="Male" required /> Male
+            <input type="radio" name="gender" value="Female" required /> Female
+          </td>
+        </tr>
+        <tr>
+          <td>District Name :</td>
+          <td>
+            <select name="districtName" required>
+              <option value="New York">New York</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Coimbatore">Coimbatore</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Events :</td>
+          <td>
+            <input type="checkbox" name="events[]" value="Wedding" />
+            Wedding
+            <input type="checkbox" name="events[]" value="Corporate" />
+            Corporate
+            <input type="checkbox" name="events[]" value="Social" />
+            Social
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="submit" name="register">Register</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

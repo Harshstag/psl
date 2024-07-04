@@ -1,0 +1,147 @@
+<html>
+    
+  <body onload="display()">
+    <center>
+      <h2>Student Details</h2>
+      <table class="">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Mobile Number</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>DOJ</th>
+            <th>Department</th>
+            <th>Mark</th>
+        </tr>
+        <tbody></tbody>
+        </thead>
+      </table>
+        <br>
+        <label>Student Id: </label>
+        <input type="text" id="id">
+        <br>
+        <label>Field Type: </label>
+          <select id="fieldType">
+            <option value="Name">Name</option>
+            <option value="DOB">DOB</option>
+            <option value="mobileNumber">Mobile Number</option>
+            <option value="email">Email</option>
+            <option value="address">Address</option>
+            <option value="DOJ">DOJ</option>
+            <option value="department">Department</option>
+            <option value="mark">Mark</option>
+        </select>
+        <br>
+        <label>Field Value: </label>
+        <input type="text" id="fieldValue">
+        <br>
+        <button id="update" onclick="updateStudent()">UPDATE</button>
+    </center>
+  
+  <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+
+
+
+
+    <script>
+        var students = [];
+
+        function display(){
+
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.open("GEt", "Students.json", true);
+
+            xhttp.onreadystatechange = function(){
+
+                if(this.readyState == 4 && this.status ==200){
+
+                    students =  JSON.parse(xhttp.responseText);
+
+                    var table = document.getElementById("studentTable");
+                    
+                    
+                    students.forEach(function(student){
+
+                        var row = document.createElement("tr");
+
+                        for(var key in student){
+
+                            var cell  = document.createElement("td");
+                            var cellData = document.createTextNode(student[key]);
+                            cell.appendChild(cellData);
+                            row.appendChild(cell);
+                        }
+
+                        table.appendChild(row);
+
+                    })
+
+                }
+            }
+            xhttp.send();
+        }
+
+        function updateStudent(){
+            
+            var id = document.getElementById("id").value;
+            var fieldType  = document.getElementById("fieldType").value;
+            var fieldValue = document.getElementById("fieldValue").value;
+
+            var student = students.find(function(student){
+                return student.id == id;
+            });
+
+            if(student){
+
+                student[fieldType] = fieldValue;
+
+                var table = document.getElementById("table");
+                table.innerHTML = `<tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>DOJ</th>
+                    <th>Department</th>
+                    <th>Mark</th>
+                </tr>`;
+
+                students.forEach(function(student){
+                    var row = document.createElement('tr');
+                    for (var key in student) {
+                        var cell = document.createElement('td');
+                        var cellText = document.createTextNode(student[key]);
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    }
+                    table.appendChild(row);
+                })
+
+            }else{
+                alert("Student not Found");s
+            }
+
+
+        }
+    </script>
+</body>
+</html>

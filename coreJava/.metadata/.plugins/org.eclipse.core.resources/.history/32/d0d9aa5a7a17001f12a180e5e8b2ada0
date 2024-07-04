@@ -1,0 +1,14 @@
+class Expenses{
+    private String expenseType;
+    private Double cost;
+    
+    Expenses(String expenseType, Double cost){
+        //Fill your code here
+    }
+    String getExpenseType(){
+        return this.expenseType;
+    }
+    Double getCost(){
+        return this.cost;
+    }
+}

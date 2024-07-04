@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDiv {
+        width: 400px;
+        height: 200px;
+        background-color: pink;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+    <script>
+      function addSize() {
+        var myDiv = document.getElementById("myDiv");
+        var currentWidth = parseInt(window.getComputedStyle(myDiv).width);
+        var currentHeight = parseInt(window.getComputedStyle(myDiv).height);
+        myDiv.style.width = currentWidth + 10 + "px";
+        myDiv.style.height = currentHeight + 10 + "px";
+      }
+    </script>
+  </head>
+  <center>
+    <h1>Increase width and height of div</h1>
+    <div id="myDiv" ondblclick="addSize()">
+      <h3>Pink frag Event Organization</h3>
+      <p>
+        Our events team handles all your requirements from conceptualization to
+        execution, leaving you free to focus completely on achieving your
+        objectives.With proper planning and logistics management and the ability
+        to activate requisite resources, we have undertaken a wide variety of
+        projects.
+      </p>
+    </div>
+  </center>
+</html>

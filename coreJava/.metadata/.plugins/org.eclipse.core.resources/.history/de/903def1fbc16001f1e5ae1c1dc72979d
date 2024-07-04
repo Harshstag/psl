@@ -1,0 +1,12 @@
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args){
+		BufferedReader br = new BufferedReader(new FileReader("input.txt"));
+		List<Event> listEvent = new ArrayList<>();
+		BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"));
+	}
+}

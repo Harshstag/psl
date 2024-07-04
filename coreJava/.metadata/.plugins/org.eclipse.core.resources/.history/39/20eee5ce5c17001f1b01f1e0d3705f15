@@ -1,0 +1,52 @@
+import java.util.*;
+import java.io.*;
+
+public class Main{
+    public static void main(String[] args){
+		
+    	Scanner scanner = new Scanner(System.in);
+    	
+    	System.out.println("Enter the number of User details to be added");
+        int n = Integer.parseInt(scanner.nextLine());
+    	
+        UserBO users = UserBO.getList();
+        
+        for (int i = 1; i <= n; i++) {
+        	
+            System.out.println("Enter the user " + i + " detail in csv format");
+            String userDetail = scanner.nextLine();
+            String[] parts = userDetail.split(",");
+
+
+            String name = parts[0].trim();
+            String contactNumber = parts[1].trim();
+            String userName = parts[2].trim();
+            String email = parts[3].trim();
+
+            User user = new User(name, contactNumber, userName, email);
+            users.add(user);
+            
+            
+        }
+        
+        System.out.printf("%-20s%-20s%-20s%-20s\n", "Name", "Contact Number", "Username", "Email");
+        for (User user : users) {
+            user.display();
+        }
+        
+        System.out.println("Enter the range to be removed from array list");
+        int fromIndex = scanner.nextInt();
+        int toIndex = scanner.nextInt();
+        
+        users.removeUser(fromIndex, toIndex);
+        
+        System.out.printf("%-20s%-20s%-20s%-20s\n", "Name", "Contact Number", "Username", "Email");
+        for (User user : users) {
+            user.display();
+        }
+
+        scanner.close();
+        
+
+	}
+}

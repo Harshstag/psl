@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Email address");
+		
+		boolean flag = true;
+		
+		ArrayList<String> emailList = new ArrayList<>();
+		
+		while(flag == true) {
+			
+			String emai = sc.nextLine();
+			emailList.add(emai);
+			
+			System.out.println("Do you want to Continue?(yes/no)");
+			String yesNo = sc.nextLine();
+			
+			if(yesNo.equalsIgnoreCase("no")) {
+				flag = false;
+			}
+		}
+	}
+
+}

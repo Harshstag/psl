@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <center>
+    <h3>Oninput Event</h3>
+    <textarea id="myContent" oninput="displayContent()"></textarea>
+    <div id="result"></div>
+  </center>
+
+  <script>
+    function displayContent() {
+      let content = document.getElementById("myContent").value;
+      document.getElementById("result").innerText =
+        "Typed text is : " + content;
+    }
+  </script>
+</html>

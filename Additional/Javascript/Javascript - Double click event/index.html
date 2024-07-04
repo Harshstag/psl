@@ -1,0 +1,65 @@
+<html>
+  <head> </head>
+
+  <body>
+    <center>
+      <h2>Login</h2>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" />
+      <br />
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <br />
+      <button id="login" onclick="getin()">Login</button>
+      <br />
+      <div id="error"></div>
+
+      <img id="ebox" /><br />
+      <button id="likes" ondblclick="increment()" style="display: none">
+        Like
+      </button>
+      <div id="total"></div>
+      <br />
+    </center>
+
+    <script>
+      var times = 1;
+      function getin() {
+        var un = document.getElementById("username").value;
+        var ps = document.getElementById("password").value;
+        var login = document.getElementById("login");
+        var label = document.getElementsByTagName("label");
+
+        var img = document.getElementById("ebox");
+        var likes = document.getElementById("likes");
+        var total = document.getElementById("total");
+        var error = document.getElementById("error");
+
+        if (un != "john" || ps != "john123") {
+          error.innerHTML = "Incorrect username/Password";
+          error.style.color = "red";
+        } else {
+          likes.style.display = "block";
+          img.src = "https://app.e-box.co.in/uploads/Image/ebox.png";
+          total.innerHTML = times + " likes";
+
+          var labels = document.getElementsByTagName("label");
+          for (var i = 0; i < labels.length; i++) {
+            labels[i].style.display = "none";
+          }
+          document.getElementsByTagName("h2")[0].style.display = "none";
+          document.getElementById("username").style.display = "none";
+          document.getElementById("password").style.display = "none";
+          document.getElementById("login").style.display = "none";
+        }
+      }
+
+      function increment() {
+        times++;
+        var total = document.getElementById("total");
+        total.innerHTML = times + " likes";
+      }
+    </script>
+  </body>
+</html>

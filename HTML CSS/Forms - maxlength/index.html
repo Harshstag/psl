@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Registration form</h1>
+  </head>
+  <body>
+    <form action="display.php" method="POST">
+      <table>
+        <tr>
+          <td>Name :</td>
+          <td><input type="text" name="name" required /></td>
+        </tr>
+        <tr>
+          <td>Username :</td>
+          <td><input type="text" name="userName" required /></td>
+        </tr>
+        <tr>
+          <td>Password :</td>
+          <td><input type="text" name="password" required /></td>
+        </tr>
+
+        <tr>
+          <td>Mobile Number :</td>
+          <td>
+            <input type="text" name="mobilenumber" maxlength="10" required />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Address :</td>
+          <td>
+            <textarea name="address" id="" maxlength="200" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <button type="submit" name="register">Register</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

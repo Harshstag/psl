@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\Spring-Boot\firstdemo"/>
+			<item value="D:\SpringJava\springioc"/>
+			<item value="D:\MavenProject"/>
+			<item value="D:\coreJava\Stream Sorted For Each"/>
+			<item value="D:\coreJava\Event List"/>
+			<item value="D:\coreJava\Stream Map Reduce"/>
+			<item value="D:\coreJava\Map of Maps"/>
+			<item value="D:\coreJava\List removeRange() and addAll()"/>
+			<item value="D:\coreJava\User Search"/>
+			<item value="D:\coreJava\City map"/>
+			<item value="D:\coreJava\Email Search"/>
+			<item value="D:\coreJava\contains() and  indexOf() methods in ArrayList"/>
+			<item value="D:\coreJava\Read and Write"/>
+			<item value="D:\coreJava\File Writing"/>
+			<item value="D:\coreJava\File handling introduction"/>
+			<item value="D:\coreJava\Date Processing --- Compare dates"/>
+			<item value="D:\coreJava\StringBuilder code"/>
+			<item value="D:\coreJava\Various date formats"/>
+			<item value="D:\coreJava\String Builder"/>
+			<item value="D:\coreJava\Using contains() and trim() method"/>
+			<item value="D:\coreJava\City Count"/>
+			<item value="D:\coreJava\Article count"/>
+			<item value="D:\coreJava\Weak password Exception"/>
+			<item value="D:\coreJava\Interface"/>
+			<item value="D:\coreJava\super() method"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="45"/>
+			<item key="DIALOG_Y_ORIGIN" value="100"/>
+			<item key="DIALOG_WIDTH" value="885"/>
+			<item key="DIALOG_HEIGHT" value="629"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="ShowDerived" value="false"/>
+		<item key="FilterByLocation" value="false"/>
+		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="367"/>
+			<item key="DIALOG_Y_ORIGIN" value="186"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="676"/>
+		<item key="DIALOG_Y_ORIGIN" value="337"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>
