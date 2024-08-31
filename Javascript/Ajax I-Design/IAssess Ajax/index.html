@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="loadJson()">
+    <h1>Book List</h1>
+    <div id="bookList">
+      <table id="table">
+        <tr>
+          <th>Book Name</th>
+          <th>Author Name</th>
+          <th>Price</th>
+        </tr>
+      </table>
+    </div>
+    <div class="formData">
+      <label for="Book Name">Book Name</label>
+      <input type="text" id="name" />
+
+      <label for="Author Name">Book Name</label>
+      <input type="text" id="authorName" />
+
+      <label for="Book Name">Book Name</label>
+      <input type="text" id="price" />
+
+      <button type="button" onclick="toJson()">Convert to JSON</button>
+      <div id="jsonDate"></div>
+    </div>
+  </body>
+  <script>
+    function loadJson() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "booklist.json", true);
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          var books = JSON.parse(xhr.responseText);
+          display(books);
+        }
+      };
+      xhr.send();
+    }
+
+    function display(bookList) {
+      var table = document.getElementById("table");
+      bookList.forEach(function (book) {
+        var row = table.insertRow();
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        var cell3 = row.insertCell();
+
+        cell1.appendChild(document.createTextNode(book.bookname));
+        cell1.appendChild(document.createTextNode(book.authorname));
+        cell1.appendChild(document.createTextNode(book.price));
+      });
+    }
+
+    function toJson() {
+      var name = document.getElementById("name").value;
+      var authorName = document.getElementById("authorName").value;
+      var price = document.getElementById("price").value;
+
+      var book = { bookname: name, authorname: authorName, price: price };
+      var jsonData = document.getElementById("jsonDate");
+      jsonData.textContent = JSON.stringify(book, null, 2);
+    }
+  </script>
+</html>

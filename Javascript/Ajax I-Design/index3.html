@@ -1,0 +1,80 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Details</title>
+  </head>
+  <body onload="display()">
+    <h2>Student Details</h2>
+    <table id="studentTable">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>Mobile Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>DOJ</th>
+        <th>Department</th>
+        <th>Mark</th>
+      </tr>
+    </table>
+    <input type="text" id="id" placeholder="Student Id" />
+    <select id="fieldType">
+      <option value="name">Name</option>
+      <option value="DOB">DOB</option>
+      <option value="mobileNumber">Mobile Number</option>
+      <option value="email">Email</option>
+      <option value="address">Address</option>
+      <option value="DOJ">DOJ</option>
+      <option value="department">Department</option>
+      <option value="mark">Mark</option>
+    </select>
+    <input type="text" id="fieldValue" placeholder="Field Value" />
+    <button id="update" onclick="update()">UPDATE</button>
+    <!-- Added id 'update' to the button -->
+
+    <script>
+      // Function to display student details
+      function display() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var students = JSON.parse(xhr.responseText);
+            var table = document.getElementById("studentTable");
+            for (var i = 0; i < students.length; i++) {
+              var row = table.insertRow(-1);
+              for (var key in students[i]) {
+                var cell = row.insertCell(-1);
+                cell.textContent = students[i][key];
+              } 
+            }
+          }
+        };
+        xhr.open("GET", "Students.json", true);
+        xhr.send();
+      }
+
+      // Function to update student details
+      function update() {
+        var id = document.getElementById("id").value;
+        var fieldType = document.getElementById("fieldType").value;
+        var fieldValue = document.getElementById("fieldValue").value;
+        var table = document.getElementById("studentTable");
+        for (var i = 1; i < table.rows.length; i++) {
+          if (table.rows[i].cells[0].textContent == id) {
+            for (var j = 0; j < table.rows[i].cells.length; j++) {
+              if (table.rows[i].cells[j].textContent == id) {
+                // Here's where you need to match the correct cell
+                table.rows[i].cells[j + 1].textContent = fieldValue; // Update the next cell, assuming it's the one containing the name
+                break;
+              }
+            }
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

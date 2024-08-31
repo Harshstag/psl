@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-CustomerApplication<JPARelationship>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.customer.jpa.CustomerApplication",
+      "projectName": "JPARelationship",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

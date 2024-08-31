@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-App<pci>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.springboot.App",
+      "projectName": "pci",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

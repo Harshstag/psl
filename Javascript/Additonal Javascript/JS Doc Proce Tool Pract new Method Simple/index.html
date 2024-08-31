@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Document Processing Tool</h1>
+    <label for="Document">Enter Document</label>
+    <textarea
+      name="documentInput"
+      id="documentInput"
+      placeholder="Type here"
+    ></textarea>
+    <br />
+    <br />
+
+    <label for="">Find and Replace</label>
+    <input type="text" name="" id="findText" placeholder="Enter text to find" />
+    <input
+      type="text"
+      name=""
+      id="replaceText"
+      placeholder="Enter text to Replace"
+    />
+    <br />
+    <br />
+
+    <label for="">Count Occurrences of Word</label>
+    <input
+      type="text"
+      name=""
+      id="countWord"
+      placeholder="Enter Word to Count"
+    />
+    <br />
+    <br />
+
+    <button id="processDocument" onclick="process()">Process Document</button>
+    <br />
+    <br />
+
+    <div id="processedDocument">
+      <h1 style="display: none" id="pd">Processed Document</h1>
+    </div>
+  </body>
+</html>
+
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore hic rerum
+consequuntur. Expedita velit fugit odit, ullam animi ipsam assumenda minima in
+impedit deserunt ea nam doloremque numquam asperiores tempora?

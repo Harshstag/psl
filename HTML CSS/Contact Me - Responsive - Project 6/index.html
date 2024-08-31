@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Fill Code here-->
+	<style>
+
+        body{
+            background-color: aquamarine;
+        }
+        img{
+            width: 16px;
+            height: 16px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+
+        li{
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .detail-holder{
+            background-color: coral;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #navbar{
+            background-color: goldenrod;
+        }
+
+        @media (max-width:1024px){
+        .main{
+                width: 100%;
+            }
+        .container{
+            width: 100%;
+        }
+
+            
+        }
+
+        @media (max-width:991px) {
+            .main{
+                width: 85%;
+            }
+            #navbar{
+            width: 85%;
+        }
+        }
+
+        @media (max-width:768px) {
+            .main{
+                width: 70%;
+            }
+            #navbar p{
+                display: none;
+            }
+            #navbar{
+            width: 70%;
+        }
+        }
+	</style>
+    <head>
+
+    <body>
+        <div id="main">
+        <header>
+            <!--Fill code here-->
+            <nav id="navbar">
+                <ul class="container">
+                    <li><img src="usericon.png"><p>ABOUT ME</p></li>
+                    <li><img src="icon-2.png"><p>RESUME</p></li>
+                    <li><img src="icon-3.png"><p>PORTFOLIO</p></li>
+                    <li><img src="icon-4.png"><p>CONTACT ME</p></li>
+                </ul>
+            </nav>
+
+	    </header>
+
+        <div id="main">
+            <div class="detail-holder">
+                <h3>Contact Me</h3>
+                <hr>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input id="firstname" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input id="lastname" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>Date Of Birth</label>
+                    <input id="dob" type="date">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input id="email" type="email">
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input id="mobilenumber" type="number">
+                </div>
+
+                <div class="form-group">
+                    <label>Reason</label>
+                    <select id="reason-select">
+                        <option>Buisness</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input id="male" type="radio">Male
+                    <input id="female" type="radio">Female
+                </div>
+
+                <div class="form-group">
+                    <label>Prefferred Mode Of communication</label>
+                    <input id="contact-mobile" type="checkbox">Mobile
+                    <input id="contact-email" type="checkbox">Email
+                </div> 
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea></textarea>
+                </div>
+
+                <input type="submit" value="submit">
+            </div>
+        </div>
+
+        </div>
+
+    </body>
+
+</html>

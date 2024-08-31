@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Event Management</h1>
+    <label for="Event Name">Event Name </label>
+    <input type="text" name="" id="name" /> <br />
+
+    <label for="Event Name">Venue </label>
+    <input type="text" name="" id="venue" /><br />
+
+    <label for="Event Name">Date </label>
+    <input type="date" name="" id="date" /><br />
+
+    <label for="Event Name">Cosy/day </label>
+    <input type="text" name="" id="price" /><br />
+
+    <label for="Event Name">No of days Needed</label>
+    <input type="text" name="" id="days" /><br />
+
+    <button type="button" id="addEvent" onclick="addEvent()">Add Event</button
+    ><br /><br />
+    <div id="updateTable" style="display: none">
+      <label for="id">Id</label>
+      <input type="number" name="id" id="uId" />
+      <label for="venue">Venue</label>
+      <input type="text" name="venue" id="uVenue" />
+      <label for="date">Date</label>
+      <input type="date" name="date" id="uDate" />
+      <button type="button" onclick="update()">Update</button>
+    </div>
+
+    <div id="result">
+      <table id="resultTable" border="1">
+        <thead>
+          <th>Event Name</th>
+          <th>Veneue</th>
+          <th>Date</th>
+          <th>Total Cost</th>
+          <th>Cancel Event</th>
+          <th>Edit Event</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div id="noEventMessage" display="none">No Events available</div>
+    </div>
+  </body>
+</html>

@@ -90,3 +90,98 @@
     	 </script>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Simple way use isNaN(phoneNumber) return true if has abc  -->
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone Number & Card Validation</title>
+    <style>
+        .warning {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h3>Phone Number & Card Validation</h3>
+    Enter your Phone Number: <input type="text" id="phoneNumber" onkeydown="checkPhoneNumber()">
+    <div id="phoneNumber_Warning" class="warning"></div><br>
+    
+    Enter your Card Number: <input type="text" id="cardNumber" onkeydown="checkCardNumber()">
+    <div id="cardNumber_Warning" class="warning"></div><br>
+    
+    <button type="button" onclick="validate()" id="Validate">Validate</button>
+    <div id="success" class="success"></div>
+
+    <script type="text/javascript">
+        function validate() {
+            let phoneValid = checkPhoneNumber();
+            let cardValid = checkCardNumber();
+
+            if (phoneValid && cardValid) {
+                document.getElementById("success").innerText = "Details stored in database";
+            } else {
+                document.getElementById("success").innerText = "";
+            }
+        }
+
+        function checkPhoneNumber() {
+            let phoneNumber = document.getElementById("phoneNumber").value;
+            let phoneWarning = document.getElementById("phoneNumber_Warning");
+            let isvalid = true;
+
+            if (isNaN(phoneNumber) || phoneNumber.trim() === "") {
+                phoneWarning.innerText = "Phone number must contain only digits";
+                isvalid = false;
+            } else if (phoneNumber.length != 10) {
+                phoneWarning.innerText = "Phone Number must be 10 digits";
+                isvalid = false;
+            } else {
+                phoneWarning.innerText = "";
+            }
+
+            return isvalid;
+        }
+
+        function checkCardNumber() {
+            let cardNumber = document.getElementById("cardNumber").value;
+            let cardWarning = document.getElementById("cardNumber_Warning");
+            let isvalid = true;
+
+            if (isNaN(cardNumber) || cardNumber.trim() === "") {
+                cardWarning.innerText = "Card number must contain only digits";
+                isvalid = false;
+            } else if (cardNumber.length > 0 && cardNumber.length != 16) {
+                cardWarning.innerText = "Card Number must be 16 digits";
+                isvalid = false;
+            } else {
+                cardWarning.innerText = "";
+            }
+
+            return isvalid;
+        }
+    </script>
+</body>
+</html> -->

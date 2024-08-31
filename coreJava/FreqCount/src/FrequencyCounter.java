@@ -1,40 +1,33 @@
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 public class FrequencyCounter extends Thread {
 
-	 private String strInput;
-	    private int[] freq;
-	    private char[] charArray;
+	private String strInput;
+	private int[] freq;
+	private Map<Character, Integer> freqMap;
 
-	    public FrequencyCounter(String strInput) {
-	        this.strInput = strInput;
-	    }
+	public FrequencyCounter(String strInput) {
+		this.strInput = strInput;
+	}
 
-	    @Override
-	    public void run() {
-	        int length = strInput.length();
-	        freq = new int[length];
-	        charArray = strInput.toCharArray();
+	@Override
+	public void run() {
+		for (char c : strInput.toCharArray()) {
+			freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+		}
+	}
 
-	        for (int i = 0; i < length; i++) {
-	            freq[i] = 1;
-	            for (int j = i + 1; j < length; j++) {
-	                if (charArray[i] == charArray[j]) {
-	                    freq[i]++;
-	                    charArray[j] = '0';  // Mark as counted
-	                }
-	            }
-	        }
-	    }
+	public void printCharFreq() {
+		List<Character> keys = new ArrayList<>(freqMap.keySet());
+		Collections.sort(keys);
 
-	    public void printCharFreq() {
-	        for (int i = 0; i < charArray.length; i++) {
-	        	Arrays.sort(charArray);
-	            if (charArray[i] != '0') {
-	                System.out.print(charArray[i] + ":" + freq[i] + " ");
-	            }
-	        }
-	        System.out.println();
-	    }
+		for (char c : keys) {
+			System.out.println(c + "->" + freqMap.get(c) + " | ");
+		}
+	}
+
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Market Billing System</h1>
+    <div id="main">
+      <div id="container1">
+        <h2>Add Product Item</h2>
+        <label for="productName">Product Name</label>
+        <input type="text" name="" id="name" /><br />
+
+        <label for="price">Price</label>
+        <input type="text" name="" id="price" /><br />
+
+        <label for="productName">Quantity</label>
+        <input type="text" name="" id="quantity" /><br />
+
+        <button id="addItem" onclick="addItem()">+Add Item</button>
+      </div>
+      <div id="container2">
+        <h2>Bill Details of Toatal Item</h2>
+        <h3 id="net_total">Your Net Amount is Rs.0</h3>
+      </div>
+    </div>
+    <div>
+      <table id="table">
+        <thead>
+          <th>Prodyct Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

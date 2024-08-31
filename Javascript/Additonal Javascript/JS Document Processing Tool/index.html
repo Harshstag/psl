@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function count() {
+        var originalString = document.getElementById("documentInput").value;
+        var words = document.getElementById("documentInput").value.split(" ");
+        var findWord = document.getElementById("findText").value;
+        var replaceWord = document.getElementById("replaceText").value;
+        var countWord = document.getElementById("countWords").value;
+
+        // var ip = 0;
+        // var jp = 0;
+        // var ans = "";
+
+        // while (jp < originalString.length) {
+        //   var k = 0;
+        //   var matched = false;
+
+        //   // Check if the substring starting from jp matches findWord
+        //   while (
+        //     k < findWord.length &&
+        //     originalString[jp + k] === findWord[k]
+        //   ) {
+        //     k++;
+        //   }
+
+        //   // If k equals findWord length, it means we found a match
+        //   if (k === findWord.length) {
+        //     ans += replaceWord; // Replace findWord with replaceWord
+        //     jp += findWord.length; // Move jp to the end of the matched findWord
+        //     ip = jp; // Set ip to the new jp
+        //     matched = true;
+        //   }
+
+        //   // If no match, add the current character to ans and move both pointers
+        //   if (!matched) {
+        //     ans += originalString[ip];
+        //     ip++;
+        //     jp = ip; // Reset jp to ip for the next comparison
+        //   }
+        // }
+
+        // var occurrences = 0;
+        // for (let i = 0; i < words.length; i++) {
+        //   if (words[i] === countWord) occurrences++;
+        // }
+
+        // Processed text
+        let ans = originalString.replace(
+          new RegExp(findWord, "g"),
+          replaceWord
+        );
+
+        // Count occurrences
+        let occurrences = (
+          originalString.match(new RegExp(countWord, "g")) || []
+        ).length;
+
+        var result1 = "Document with Replaced Text: " + ans + "\n";
+        var result2 = "Occurrences of " + `"${countWord}"` + ": " + occurrences;
+
+        var p1 = document.createElement("p");
+        p1.innerHTML = result1;
+
+        var p2 = document.createElement("p");
+        p2.innerHTML = result2;
+
+        var h3Tag = document.getElementById("PDH3");
+
+        h3Tag.style.display = "block";
+
+        var processedDocument = document.getElementById("processedDocument");
+        processedDocument.appendChild(p1);
+        processedDocument.appendChild(p2);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Document Processing Tool</h1>
+    <label>Enter Document</label>
+    <textarea
+      id="documentInput"
+      placeholder="Type or paste your document here..."
+    ></textarea
+    ><br />
+    <label>Find and Replace Text</label>
+    <input id="findText" placeholder="Enter text to find" />
+    <input id="replaceText" placeholder="Enter text to replace" />
+    <br />
+    <label>Count Occurrences of Word</label>
+    <input id="countWords" placeholder="Enter word to count" />
+    <br />
+    <button id="processDocument" onclick="count()">Process Document</button>
+    <br />
+    <h3 id="PDH3" style="display: none">Processed Document</h3>
+    <br />
+    <div id="processedDocument"></div>
+  </body>
+</html>

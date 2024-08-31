@@ -19,7 +19,7 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @RequestMapping("/patient")
     public List<Patient> listPatients() {
         return patientService.getPatients();
     }

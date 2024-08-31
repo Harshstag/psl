@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Monday</li>
+      <li>Tuesday</li>
+      <li>Wedneshday</li>
+      <li>Thursday</li>
+      <li>Friday</li>
+      <li>Saturday</li>
+      <li>Sunday</li>
+    </ul>
+  </body>
+  <script>
+    function fun(day) {
+      const ele = document.querySelector("li:nth-child(2)");
+      ele.innerText = day;
+    }
+    console.log("sunning");
+
+    fun("My new day");
+  </script>
+</html>

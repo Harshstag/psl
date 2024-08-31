@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "name": "John",
+    "DOB": "09-15-1998",
+    "mobileNumber": "9967543421",
+    "email": "john@email.com",
+    "address": "Chennai",
+    "DOJ": "06-01-2016",
+    "department": "CSE",
+    "mark": "100"
+  },
+  {
+    "id": "2",
+    "name": "Liya",
+    "DOB": "12-15-1997",
+    "mobileNumber": "8978321211",
+    "email": "liya@email.com",
+    "address": "Coimbatore",
+    "DOJ": "06-01-2016",
+    "department": "ECE",
+    "mark": "78"
+  },
+  {
+    "id": "3",
+    "name": "Rio",
+    "DOB": "10-20-1998",
+    "mobileNumber": "9078342122",
+    "email": "rio@email.com",
+    "address": "Madurai",
+    "DOJ": "06-20-2016",
+    "department": "CSE",
+    "mark": "90"
+  },
+  {
+    "id": "4",
+    "name": "Priya",
+    "DOB": "01-01-1998",
+    "mobileNumber": "9965348304",
+    "email": "priya@email.com",
+    "address": "Coimbatore",
+    "DOJ": "06-20-2016",
+    "department": "CIVIL",
+    "mark": "95"
+  },
+  {
+    "id": "5",
+    "name": "Amy",
+    "DOB": "11-23-1997",
+    "mobileNumber": "9880153455",
+    "email": "amy@email.com",
+    "address": "Chennai",
+    "DOJ": "07-01-2016",
+    "department": "CSE",
+    "mark": "50"
+  }
+]

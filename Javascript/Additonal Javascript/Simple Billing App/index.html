@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>Event Management</h2>
+    <table>
+      <tr>
+        <td>Event Name</td>
+        <td><input type="text" name="name" id="name" /></td>
+      </tr>
+      <tr>
+        <td>Venue</td>
+        <td><input type="text" name="venue" id="venue" /></td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td><input type="date" name="name" id="date" /></td>
+      </tr>
+      <tr>
+        <td>Cosy/day</td>
+        <td><input type="text" name="price" id="price" /></td>
+      </tr>
+      <tr>
+        <td>No of days Needed</td>
+        <td><input type="text" name="count" id="count" /></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <button type="button" id="addEvent" onclick="addEvent()">
+            Add Event
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <div id="updateTable" style="display: none">
+      <label for="id">Id</label>
+      <input type="number" name="id" id="uId" />
+      <label for="venue">Venue</label>
+      <input type="text" name="venue" id="uVenue" />
+      <label for="date">Date</label>
+      <input type="date" name="date" id="uDate" />
+      <button type="button" onclick="update()">Update</button>
+    </div>
+
+    <div id="result">
+      <table id="resultTable" border="1">
+        <thead>
+          <th>Event Name</th>
+          <th>Veneue</th>
+          <th>Date</th>
+          <th>Total Cost</th>
+          <th>Cancel Event</th>
+          <th>Edit Event</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div id="noEventMessage" display="none">No Events available</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

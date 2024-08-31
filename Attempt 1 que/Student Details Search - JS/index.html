@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Student Details</title>
+  </head>
+  <body onload="loadJSON()">
+    <!-- Fill your code -->
+
+    <h3>Students Detail Serach</h3>
+
+    <input
+      type="text"
+      name=""
+      id="studentname"
+      placeholder="Enter Name of Students"
+    />
+    <button type="button" onclick="search()">Serach</button>
+
+    <div id="result"></div>
+  </body>
+
+  <script>
+    var Students = [];
+
+    function search() {
+      var name = document.getElementById("studentname").value;
+      var div = document.getElementById("result");
+
+      Students.filter(function (Student) {
+        if (Student.name == name) {
+          div.innerHTML = `Name: ${Student.name} <br/> CGPA: ${Student.cgpa} <br/> Age : ${Student.age} <br/> Department : ${Student.department}<br/> Barch : ${Student.batch}<br/>`;
+        }
+      });
+    }
+
+    function loadJSON() {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "StudentDetails.json", true);
+      xhr.onload = function () {
+        if (xhr.status == 200 || xhr.readyState == 4) {
+          Students = JSON.parse(xhr.responseText);
+          console.log(Students);
+        }
+      };
+      xhr.send();
+    }
+  </script>
+</html>

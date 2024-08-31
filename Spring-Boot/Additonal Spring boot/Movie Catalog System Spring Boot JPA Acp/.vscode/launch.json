@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-MovieCatalogSystemSpringBootJpaApplication<MovieCatalogSystemSpringBootJPA>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.springboot.MovieCatalogSystemSpringBootJpaApplication",
+      "projectName": "MovieCatalogSystemSpringBootJPA",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

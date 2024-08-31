@@ -1,0 +1,67 @@
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn {
+  text-align: center;
+}
+
+#booklist {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid black;
+  margin: 15px;
+  border-collapse: collapse;
+}
+
+tr:first-child {
+  background-color: lightblue;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 15px !important;
+}
+
+td {
+  padding: 15px;
+}
+
+#getBooklist {
+  padding: 10px;
+}
+
+.formData {
+  text-align: center;
+}
+
+.fields {
+  padding: 15px;
+}
+
+#convertToJSON {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+#jsonData {
+  margin-top: 15px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 7px;
+  border: 1px solid gray;
+}

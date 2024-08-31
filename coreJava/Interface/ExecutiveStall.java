@@ -20,5 +20,29 @@ public class ExecutiveStall implements Stall{
 		System.out.println("Number of Screens:" + screen);
 		
 	}
+	public String getStallName() {
+		return stallName;
+	}
+	public void setStallName(String stallName) {
+		this.stallName = stallName;
+	}
+	public Integer getCost() {
+		return cost;
+	}
+	public void setCost(Integer cost) {
+		this.cost = cost;
+	}
+	public String getOwnerName() {
+		return ownerName;
+	}
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	public Integer getScreen() {
+		return screen;
+	}
+	public void setScreen(Integer screen) {
+		this.screen = screen;
+	}
 	
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "bookname": "Farm House",
+    "authorname": "George Orwell",
+    "price": "$10"
+  },
+  {
+    "bookname": "Good Times, Bad Times",
+    "authorname": "Harold Evans",
+    "price": "$20"
+  },
+  {
+    "bookname": "A Journey",
+    "authorname": "Tony Blair",
+    "price": "$50"
+  },
+  {
+    "bookname": "The Jungle Book",
+    "authorname": "Rudyard Kipling",
+    "price": "$30"
+  },
+  {
+    "bookname": "Oliver Twist",
+    "authorname": "Charles Dickens",
+    "price": "$40"
+  }
+]

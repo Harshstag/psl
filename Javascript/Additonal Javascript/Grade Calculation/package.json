@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "readline-sync": "^1.4.9"
+  },
+    "name": "es5",
+  "version": "1.0.0",
+  "description": "demo",
+  "console":"externalTerminal",
+  "scripts": {
+    "start": "node app.js"    
+  }
+  
+}
+

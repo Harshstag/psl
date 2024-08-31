@@ -1,0 +1,89 @@
+[
+    {
+    "name": "Jhon",
+    "cgpa":"6.7",
+    "age": 20,
+    "department": "CSE",
+    "batch":"2022"
+    },
+
+    {
+    "name": "Smith",
+    "cgpa":"7.7",
+    "age": 21,
+    "department": "EEE",
+    "batch":"2021"
+    },
+
+    {
+    "name": "Alex",
+    "cgpa":"8.7",
+    "age": 22,
+    "department": "MECH",
+    "batch":"2020"
+    },
+
+    {
+    "name": "Jack",
+    "cgpa":"10.7",
+    "age": 24,
+    "department": "ECE",
+    "batch":"2018"
+    },
+
+    {
+    "name": "James",
+    "cgpa":"9.7",
+    "age": 23,
+    "department": "CIVIL",  
+    "batch":"2019"
+    },
+
+    {
+    "name": "Tom",
+    "cgpa":"7.6",
+    "age": 25,
+    "department": "CSE",
+    "batch":"2017"
+    },
+
+    {
+    "name": "Harry",
+    "cgpa":"8.6",
+    "age": 26,
+    "department": "EEE",
+    "batch":"2016"
+    },
+
+    {
+    "name": "Ron",
+    "cgpa":"9.6",
+    "age": 27,
+    "department": "MECH",
+    "batch":"2015"
+    },
+
+    {
+    "name": "Hermione",
+    "cgpa":"10.6",
+    "age": 28,
+    "department": "ECE",
+    "batch":"2014"
+    },
+
+    {
+    "name": "Draco",
+    "cgpa":"9.5",
+    "age": 29,
+    "department": "CIVIL",  
+    "batch":"2013"
+    },
+
+    {
+    "name": "Voldemort",
+    "cgpa":"8.5",
+    "age": 30,
+    "department": "CSE",
+    "batch":"2012"
+    }   
+]

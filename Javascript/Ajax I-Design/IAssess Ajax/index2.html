@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+
+    function loadJson(){
+        var bookList = [];
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', "booklist.json", true);
+        xhr.onload = function(){
+            if(xhr.status == 200 && xhr.readyState == 4){
+                bookList = JSON.parse(xhr.responseText);   
+                display(bookList);
+            }
+        }
+        xhr.send();
+    }
+
+    function display(bookList){
+        var tbody = document.querySelector("tbody");
+
+        bookList.forEach(function(book){
+            var tr = tbody.insertRow();
+
+            var cell1 = tr.insertCell();
+            var cell2 = tr.insertCell();
+            var cell3 = tr.insertCell();
+
+
+            cell1.textContent = book.bookname;
+            cell2.textContent = book.authorname;
+            cell3.textContent = book.price;
+
+
+
+        })
+    }
+
+    function toJson(){
+        var bookname = document.getElementById("name").value;
+        var authorName = document.getElementById("authorName").value;
+        var price = document.getElementById("price").value;
+
+        var book = {
+            bookname: bookname,
+            authorname: authorName,
+            price:price,
+        }
+
+        var JsonData = JSON.stringify(book);
+
+        var div = document.getElementById("jsonDate");
+        div.textContent = JsonData;
+    }
+
+    
+  </script>
+  <body onload="loadJson()">
+    <h1>Book List</h1>
+    <div>
+    </div><table id="bookListTable">
+      <thead>
+        <th>Book Name</th>
+        <th>Author Name</th>
+        <th>Price</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div><br><br>
+
+    <div class="formData">
+      <label for="Book Name">Book Name</label>
+      <input type="text" id="name" /><br>
+
+      <label for="Author Name">Book Name</label>
+      <input type="text" id="authorName" /><br>
+
+      <label for="Book Name">Book Name</label>
+      <input type="text" id="price" /><br>
+
+      <button type="button" onclick="toJson()">Convert to JSON</button><br>
+      <div id="jsonDate"></div>
+    </div>
+  </body>
+</html>

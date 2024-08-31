@@ -1,0 +1,4 @@
+Mobile Phone,Apple,White,30000,John,john23@gmail.com
+Sony TV,Sony,Black,18000,Smith,smith12@gmail.com
+Fridge,Samsung,gray,15000,Charles,charlesgmail.com
+Watch,Sonata,Blue,4000,Sandra,sandra@gmail.com

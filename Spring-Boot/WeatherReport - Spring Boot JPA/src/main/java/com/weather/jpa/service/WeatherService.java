@@ -27,7 +27,7 @@ public class WeatherService {
 	}
 	
 	public WeatherReport view(Long id) {
-      return (WeatherReport)this.weatherRepository.findById(id).orElse(null);
+      return (WeatherReport) this.weatherRepository.findById(id).orElse(null);
    }
 
    public Boolean deleteCases(Long id) {

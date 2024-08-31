@@ -1,5 +1,10 @@
-import java.util.*;
-import java.io.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -38,7 +43,7 @@ public class Main {
 		Collections.sort(sortedUserList);
 
 		System.out.println("Users going to expire within a month");
-		
+
 		int count = 1;
 		for (User user : sortedUserList) {
 			System.out.println("User " + count);

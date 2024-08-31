@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function loadJson() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "booklist.json", true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            var books = JSON.parse(xhr.responseText);
+            displayBooks(books);
+          }
+        };
+        xhr.send();
+      }
+
+      function displayBooks(books) {
+        var booklistDiv = document.getElementById("booklist");
+        var table = document.createElement("table");
+        var header = table.insertRow();
+        var th1 = document.createElement("th");
+        var th2 = document.createElement("th");
+        var th3 = document.createElement("th");
+
+        th1.appendChild(document.createTextNode("Book Name"));
+        th2.appendChild(document.createTextNode("Author Name"));
+        th3.appendChild(document.createTextNode("Price"));
+
+        header.appendChild(th1);
+        header.appendChild(th2);
+        header.appendChild(th3);
+
+        books.forEach(function (book) {
+          var row = table.insertRow();
+          var cell1 = row.insertCell();
+          var cell2 = row.insertCell();
+          var cell3 = row.insertCell();
+
+          cell1.appendChild(document.createTextNode(book.bookname));
+          cell2.appendChild(document.createTextNode(book.authorname));
+          cell3.appendChild(document.createTextNode(book.price));
+        });
+
+        booklistDiv.appendChild(table);
+      }
+
+      function tojson() {
+        var name = document.getElementById("name").value;
+        var author = document.getElementById("price").value;
+        var price = document.getElementById("availableQuantity").value;
+
+        var book = {
+          "Book Name": name,
+          "Author Name": author,
+          Price: price,
+        };
+
+        var jsonDataDiv = document.getElementById("jsonData");
+        jsonDataDiv.textContent = JSON.stringify(book, null, 2);
+      }
+    </script>
+  </head>
+  <body onload="loadJson()">
+    <h1>Book List</h1>
+    <div id="booklist"></div>
+    <div class="formData">
+      <div class="fields">
+        <label>Book Name:</label>
+        <input type="text" id="name" /><br />
+        <label>Author Name:</label>
+        <input type="text" id="price" /><br />
+        <label>Book Price:</label>
+        <input type="text" id="availableQuantity" /><br />
+        <button id="convertToJSON" onclick="tojson()">Convert to JSON</button>
+      </div>
+    </div>
+    <div id="jsonData"></div>
+  </body>
+</html>

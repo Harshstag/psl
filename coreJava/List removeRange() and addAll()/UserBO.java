@@ -4,8 +4,8 @@ import java.util.Collection;
 public class UserBO extends ArrayList<User> {
 
     // Method to remove users from index n1 to n2
-    public void removeUser(int n1, int n2) {
-        // Creating a method to access the protected removeRange method of ArrayList
+    public void removeUsers(int n1, int n2) {
+        // Removing users from index n1 to n2
         removeRange(n1, n2);
     }
 

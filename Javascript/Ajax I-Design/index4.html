@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var students = [];
+      function loadJson() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "Students.json", true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            students = JSON.parse(xhr.responseText);
+            display(students);
+          }
+        };
+        xhr.send();
+      }
+
+      function display(students) {
+        var tbody = document.querySelector("tbody");
+        tbody.innerHTML = "";
+
+        console.log(students);
+
+        students.forEach(function (student) {
+          var tr = document.createElement("tr");
+
+          var td1 = document.createElement("td");
+          td1.textContent = student.id;
+
+          var td2 = document.createElement("td");
+          td2.textContent = student.name;
+
+          var td3 = document.createElement("td");
+          td3.textContent = student.DOB;
+
+          var td4 = document.createElement("td");
+          td4.textContent = student.mobileNumber;
+
+          var td5 = document.createElement("td");
+          td5.textContent = student.email;
+
+          var td6 = document.createElement("td");
+          td6.textContent = student.address;
+
+          var td7 = document.createElement("td");
+          td7.textContent = student.DOJ;
+
+          var td8 = document.createElement("td");
+          td8.textContent = student.department;
+
+          var td9 = document.createElement("td");
+          td9.textContent = student.mark;
+
+          tr.appendChild(td1);
+          tr.appendChild(td2);
+          tr.appendChild(td3);
+          tr.appendChild(td4);
+          tr.appendChild(td5);
+          tr.appendChild(td6);
+          tr.appendChild(td7);
+          tr.appendChild(td8);
+          tr.appendChild(td9);
+
+          tbody.appendChild(tr);
+        });
+      }
+
+      function update() {
+        var id = document.getElementById("id").value;
+        var fieldType = document.getElementById("fieldType").value;
+        var fieldValue = document.getElementById("fieldValue").value;
+
+        var table = document.getElementById("studentTable");
+
+        // var x = 0;
+        // if (fieldType == "Name") x = 1;
+        // else if (fieldType == "DOB") x = 2;
+        // else if (fieldType == "Mobile Number") x = 3;
+        // else if (fieldType == "Email") x = 4;
+        // else if (fieldType == "Address") x = 5;
+        // else if (fieldType == "DOJ") x = 6;
+        // else if (fieldType == "Department") x = 7;
+        // else if (fieldType == "Mark") x = 8;
+
+        // for (var i = 0; i < table.rows.length; i++) {
+        //   if (table.rows[i].cells[0].textContent == id) {
+        //     table.rows[i].cells[x].textContent = fieldValue;
+        //   }
+        // }
+
+        for (var i = 0; i < students.length; i++) {
+          if (students[i].id == id) {
+            students[i][fieldType] = fieldValue;
+          }
+        }
+
+        display(students);
+      }
+    </script>
+  </head>
+  <body onload="loadJson()">
+    <h1>Student Details</h1>
+    <table border="1" id="studentTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>DOB</th>
+          <th>Mobile Number</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>DOJ</th>
+          <th>Department</th>
+          <th>Mark</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <br />
+    <div id="update">
+      <label for="">Student Id: </label>
+      <input type="text" name="" id="id" /><br />
+
+      <label for="">Field Type: </label>
+      <select name="" id="fieldType">
+        <option value="name">Name</option>
+        <option value="DOB">DOB</option>
+        <option value="mobileNumber">Number</option>
+        <option value="email">Email</option></select
+      ><br />
+
+      <label for="">Field Value: </label>
+      <input type="text" name="" id="fieldValue" /><br />
+
+      <button type="button" onclick="update()">Update</button>
+    </div>
+  </body>
+</html>
